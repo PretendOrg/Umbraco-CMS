@@ -97,19 +97,20 @@
 		<div class="row">
 			<div class="control-group">
 				<div class="controls">
-                    <input type="submit" ng-disabled="myForm.$invalid || checking" ng-class="{disabled:myForm.$invalid}"
-                           value="Continue" class="btn btn-success" />
+					<button class="btn btn-info" ng-click="restart()">Go back</button>
 
-						<button class="btn btn-info" ng-click="restart()">Go back</button>
-                    
-					    <span class="inline-help" ng-if="checking" ng-animate="'fade'">
-	                    	Validating your database connection...
-	                    </span>
+					<input type="submit" ng-disabled="myForm.$invalid || checking" ng-class="{disabled:myForm.$invalid}"
+						   value="Continue" class="btn btn-success" />
 
-						<span class="inline-help error" ng-if="invalidDbDns" ng-animate="'fade'">
-							Could not connect to database
-						</span>
-                </div>
+
+					<span class="inline-help" ng-if="checking" ng-animate="'fade'">
+						Validating your database connection...
+					</span>
+
+					<span class="inline-help error" ng-if="invalidDbDns" ng-animate="'fade'">
+						Could not connect to database
+					</span>
+				</div>
 			</div>
 		</div>
 
